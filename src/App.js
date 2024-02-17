@@ -13,7 +13,7 @@ import Orders from './fullpage/Orders'
 import Dashboard from './fullpage/Dashboard'
 const App = () => {
   return (
-    <div id='layout-wrapper'>
+    <div id="layout-wrapper" className="App">
             <Router>
                 <AuthProvider>
                     <Routes>
