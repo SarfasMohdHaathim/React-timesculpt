@@ -18,7 +18,6 @@ const Dashboard = () => {
   let username = decode.username
   let email = decode.email
   let full_name = decode.full_name
-  let bio = decode.bio
   
 
   useEffect(() => {

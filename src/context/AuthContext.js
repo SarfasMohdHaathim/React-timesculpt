@@ -77,9 +77,9 @@ export const AuthProvider = ({ children }) => {
         const data = await response.json()
 
         if (response.status == 201){
-            navigate('/login')
+            navigate('/admin')
             swal.fire({
-                title: "Registration Success",
+                title: "Staff User Added Success",
                 icon: "success",
                 toast: true,
                 timer: 6000,

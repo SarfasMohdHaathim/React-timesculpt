@@ -11,6 +11,8 @@ import WatchEdit from './fullpage/WatchEdit'
 import WatchImageAdd from './fullpage/WatchImageAdd'
 import Orders from './fullpage/Orders'
 import Dashboard from './fullpage/Dashboard'
+import AdminAdd from './fullpage/AdminAdd'
+import ViewAdmin from './fullpage/ViewAdmin'
 const App = () => {
   return (
     <div id="layout-wrapper" className="App">
@@ -30,21 +32,22 @@ const App = () => {
                             <ProtectedRoute>
                                 <Dashboard />
                             </ProtectedRoute>} />
-                        <Route path="/watch/add" exact element={<WatchAdd />} />
+                        <Route path="/watch-add" exact element={<WatchAdd />} />
                         <Route path="/watch" exact element={<Watch />} />
-                        <Route path="/orders" exact element={<ProtectedRoute><Orders /></ProtectedRoute>} />
+                        <Route path="/admin" exact element={<ProtectedRoute><ViewAdmin /></ProtectedRoute>} />
+                        <Route path="/admin-add" exact element={<ProtectedRoute><AdminAdd /></ProtectedRoute>} />
                         <Route
-                        path="/watch/detail/:id"
+                        path="/watch-detail/:id"
                         exact
                         element={<Detail/>}
                         />
                         <Route
-                        path="/watch/edit/:id"
+                        path="/watch-edit/:id"
                         exact
                         element={<WatchEdit/>}
                         />
                         <Route
-                        path="/watch/add/:id"
+                        path="/watch-add/:id"
                         exact
                         element={<WatchImageAdd/>}
                         />
