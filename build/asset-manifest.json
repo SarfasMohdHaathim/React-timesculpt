@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/React-timesculpt/static/js/main.fcfd2838.js",
-    "index.html": "/React-timesculpt/index.html",
-    "main.fcfd2838.js.map": "/React-timesculpt/static/js/main.fcfd2838.js.map"
+    "main.js": "/static/js/main.fcfd2838.js",
+    "index.html": "/index.html",
+    "main.fcfd2838.js.map": "/static/js/main.fcfd2838.js.map"
   },
   "entrypoints": [
     "static/js/main.fcfd2838.js"
