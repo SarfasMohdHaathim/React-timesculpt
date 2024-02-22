@@ -79,11 +79,11 @@ const Header = () => {
                             <li className="menu-title" key="t-menu">Menu</li>
                             <li>
                                 <a href="javascript: void(0);" className="has-arrow">
-                                    <i className="bx bx-user"></i>
-                                    <span key="t-dashboards">Users</span>
+                                    <i className="bx bx-home-circle"></i>
+                                    <span key="t-dashboards">Dashboard</span>
                                 </a>
                                 <ul className="sub-menu" aria-expanded="false">
-                                    <li><Link to='/' >View Users</Link></li>
+                                    <li><Link to='/' > View Customers</Link></li>
                                 </ul>
                             </li>
                             <li>
@@ -107,7 +107,7 @@ const Header = () => {
                             </li>
                             <li>
                                 <a href="javascript: void(0);" className="has-arrow">
-                                    <i className="bx bx-receipt"></i>
+                                    <i className="bx bxs-user-circle"></i>
                                     <span key="t-dashboards">Admin</span>
                                 </a>
                                 <ul className="sub-menu" aria-expanded="false">
