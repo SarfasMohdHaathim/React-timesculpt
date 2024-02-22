@@ -54,7 +54,7 @@ const Header = () => {
                             <button type="button" className="btn header-item waves-effect" id="page-header-user-dropdown"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img className="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg" alt="Header Avatar" />
-                                <span className="d-none d-xl-inline-block ms-1" key="t-henry">{full_name}</span>
+                                <span className="d-none d-xl-inline-block ms-1" key="t-henry">{username}</span>
                                 <i className="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                             </button>
                             <div className="dropdown-menu dropdown-menu-end">
@@ -93,7 +93,7 @@ const Header = () => {
                                 </a>
                                 <ul className="sub-menu" aria-expanded="false">
                                     <li><Link to='/watch' >View Watches</Link></li>
-                                    <li><Link to='/watch/add'>Add Watches</Link></li>
+                                    <li><Link to='/watch-add'>Add Watches</Link></li>
                                 </ul>
                             </li>
                             <li>
@@ -111,8 +111,8 @@ const Header = () => {
                                     <span key="t-dashboards">Admin</span>
                                 </a>
                                 <ul className="sub-menu" aria-expanded="false">
-                                    <li><Link to='/orders' >View Admin</Link></li>
-                                    <li><Link to='/admin/add' >Add Admin</Link></li>
+                                    <li><Link to='/admin' >View Admin</Link></li>
+                                    <li><Link to='/admin-add' >Add Admin</Link></li>
                                 </ul>
                             </li>
                         </ul>

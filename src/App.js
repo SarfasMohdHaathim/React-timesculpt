@@ -32,17 +32,18 @@ const App = () => {
                             <ProtectedRoute>
                                 <Dashboard />
                             </ProtectedRoute>} />
-                        <Route path="/watch_add" exact element={<WatchAdd />} />
+                        <Route path="/watch-add" exact element={<WatchAdd />} />
                         <Route path="/watch" exact element={<Watch />} />
                         <Route path="/admin" exact element={<ProtectedRoute><ViewAdmin /></ProtectedRoute>} />
-                        <Route path="/admin_add" exact element={<ProtectedRoute><AdminAdd /></ProtectedRoute>} />
+                        <Route path="/orders" exact element={<ProtectedRoute><Orders /></ProtectedRoute>} />
+                        <Route path="/admin-add" exact element={<ProtectedRoute><AdminAdd /></ProtectedRoute>} />
                         <Route
-                        path="/watch_detail/:id"
+                        path="watch/detail/:id"
                         exact
                         element={<Detail/>}
                         />
                         <Route
-                        path="/watch_edit/:id"
+                        path="/watch-edit/:id"
                         exact
                         element={<WatchEdit/>}
                         />

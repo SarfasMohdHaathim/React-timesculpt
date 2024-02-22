@@ -1,17 +1,21 @@
-import React, {useContext} from 'react'
-import { Link } from 'react-router-dom'
+import React, {useState, useContext} from 'react'
 import AuthContext from '../context/AuthContext'
 
 const Login = () => {
   const {loginUser} = useContext(AuthContext)
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    setIsSubmitting(true);
 
     const email = e.target.email.value
     const password = e.target.password.value
 
     loginUser(email, password)
+    setTimeout(() => {
+      setIsSubmitting(false); 
+    }, 20000);
   }
   return (
 <div className="account-pages my-5 pt-sm-5">
@@ -21,10 +25,10 @@ const Login = () => {
                 <div className="card overflow-hidden">
                     <div className="bg-primary bg-soft">
                         <div className="row">
-                            <div className="col-7">
+                            <div className="col-10">
                                 <div className="text-primary p-4">
                                     <h5 className="text-primary">Welcome Back !</h5>
-                                    <p>Sign in to continue to Skote.</p>
+                                    <p>Sign in to continue to React Dashboard.</p>
                                 </div>
                             </div>
                         </div>
@@ -41,6 +45,7 @@ const Login = () => {
                                   required
                                   className="form-control"
                                   placeholder="Enter email"
+                                  value={'admin@gmail.com'}
                                 />
                               </div>
                               <div className="mb-3">
@@ -53,12 +58,13 @@ const Login = () => {
                                     required
                                     className="form-control"
                                     placeholder="Enter password"
+                                    value={'admin123'}
                                   />
                                 </div>
                               </div>
                               <div className="mt-3 d-grid">
-                                <button className="btn btn-primary waves-effect waves-light" type="submit">
-                                  Log In
+                                <button type="submit" className="btn btn-primary waves-effect waves-light" disabled={isSubmitting}>
+                                  {isSubmitting ? "Wait..." : "Login"}
                                 </button>
                               </div>
                             </form>

@@ -77,7 +77,7 @@ const DetailView = () => {
                                         <div className="col-md-6">
                                             <div>
                                             <Link className="btn btn-primary waves-effect waves-light mt-2 me-1" 
-                                                to={`/watch/edit/${id}`}><i className="bx bx-file me-2"></i> Edit {watch && watch.watch_name}</Link>
+                                                to={`/watch-edit/${id}`}><i className="bx bx-file me-2"></i> Edit {watch && watch.watch_name}</Link>
                                             </div>  
                                         </div>
                                     </div>
@@ -119,7 +119,7 @@ const DetailView = () => {
                                             {/* Buttons */}
                                             <div className="text-center">
                                                 <Link className="btn btn-primary waves-effect waves-light mt-2 me-1" 
-                                                to={`/watch/add/${id}`}><i className="bx bx-file me-2"></i> Add Watch Images</Link>
+                                                to={`/watch-add/${id}`}><i className="bx bx-file me-2"></i> Add Watch Images</Link>
                                             </div>  
                                         </div>
                                     </div>

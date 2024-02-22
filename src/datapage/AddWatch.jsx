@@ -18,8 +18,9 @@ const AddWatch = () => {
         strap_material: ''
     });
     const navigate = useNavigate();
-    const swal = require('sweetalert2')
-
+    const swal = require('sweetalert2');
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -64,6 +65,8 @@ const AddWatch = () => {
       
       const handleSubmit = async (e) => {
         e.preventDefault();
+        
+      setIsSubmitting(true);
         const formData = new FormData();
         for (let key in watchData) {
           console.log(key);
@@ -318,7 +321,10 @@ const AddWatch = () => {
                                 </select>
                             </div>
                         </div>
-                            <button type="submit" className="btn btn-primary">Submit</button>
+                        
+                    <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
+                      {isSubmitting ? "Wait..." : "Submit"}
+                    </button>
                         </form>
                     </div>
                 </div>

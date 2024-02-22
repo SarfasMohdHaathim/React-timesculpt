@@ -22,7 +22,7 @@ const AddAdmin = () => {
       registerUser(full_name, email, username, password, password2);
       setTimeout(() => {
         setIsSubmitting(false); 
-      }, 2000);
+      }, 20000);
     };
   
 
